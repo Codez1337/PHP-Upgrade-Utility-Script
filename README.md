@@ -10,3 +10,7 @@ $results = $upgrader->run();
 echo "<pre>";
 print_r($results);
 echo "</pre>";
+
+$tokens = token_get_all($code);
+$converter = new PHPUpgrader('/home/user/public_html');
+$code = $converter->convert($tokens);
